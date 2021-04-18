@@ -4,8 +4,10 @@ import { Button } from "baseui/button";
 import { DatePicker } from "baseui/datepicker";
 import { FormControl } from "baseui/form-control";
 import { Input } from "baseui/input";
+import { MyButton } from "../components/Button";
+import { MyInput } from "../components/Input";
 
-export default function Example() {
+export default function Welcome() {
   const [date, setDate] = React.useState(new Date());
   const [inputValue, setInputValue] = React.useState("");
 
@@ -50,9 +52,7 @@ export default function Example() {
         </FormControl>
       </StyledBody>
       <StyledAction>
-        <Button overrides={{ BaseButton: { style: { width: "100%" } } }}>
-          Xem Kết Quả →
-        </Button>
+        <MyButton>Xem Kết Quả →</MyButton>
       </StyledAction>
     </Card>
   );
