@@ -7,6 +7,9 @@ import { Input } from "baseui/input";
 import { MyButton } from "../components/Button";
 import { MyInput } from "../components/Input";
 
+import ResultPages from "./result-pages";
+import Link from "next/link";
+
 export default function Welcome() {
   const [date, setDate] = React.useState(new Date());
   const [inputValue, setInputValue] = React.useState("");
@@ -52,7 +55,9 @@ export default function Welcome() {
         </FormControl>
       </StyledBody>
       <StyledAction>
-        <MyButton>Xem Kết Quả →</MyButton>
+        <Link href="/result-pages">
+          <MyButton>Xem Kết Quả →</MyButton>
+        </Link>
       </StyledAction>
     </Card>
   );

@@ -5,13 +5,13 @@ import Head from "next/head";
 
 export default function Home() {
   return (
-    <Layout>
+    <div>
       <Head>
         <title>Sang Le Tech</title>
         <meta name="Description" content="SLT Numerology Fengshui Calculator" />
       </Head>
       <Welcome />
-    </Layout>
+    </div>
   );
 }
 

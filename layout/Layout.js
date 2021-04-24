@@ -8,7 +8,7 @@ function Layout({ children }) {
   const [css, theme] = useStyletron();
   //TODO: This need to double check and work next
   const blockStyle = css({
-    paddingTop: "100px",
+    padding: "20px",
   });
 
   return (
