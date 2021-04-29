@@ -15,6 +15,22 @@ import Link from "next/link";
 function ResultPages() {
   const [value, setValue] = React.useState(10);
 
+  const currentPage = 0;
+
+  function totalPages(charactersPerPage, totalCharacters) {
+    return charactersPerPage / totalCharacters;
+  }
+
+  totalPages(100, 1000);
+  console.log(totalPages);
+
+  const text = [
+    "lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit am adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit",
+  ];
+
+  const textCut = text.splice(1, 5);
+  console.log(textCut);
+
   return (
     <Block
       overrides={{
@@ -33,17 +49,7 @@ function ResultPages() {
         },
       }}
     >
-      <ProgressBar
-        value={10}
-        successValue={100}
-        overrides={{
-          BarProgress: {
-            style: ({ $theme }) => ({
-              outline: `dashed`,
-            }),
-          },
-        }}
-      />
+      <ProgressBar value={10} successValue={100} />
       <Card
         overrides={{
           Root: {

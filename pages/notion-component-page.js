@@ -27,13 +27,16 @@ export default function NotionPage({ recordMap }) {
   const title = getPageTitle(recordMap);
   console.log(title, recordMap);
 
+  const selectValue = recordMap.block[1];
+
+  console.log(selectValue);
+
   return (
     <>
       <Head>
         <meta name="description" content="Galatek Website" />
         <title>{title}</title>
       </Head>
-
       <NotionRenderer recordMap={recordMap} fullPage={true} darkMode={false} />
     </>
   );

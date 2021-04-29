@@ -6,10 +6,11 @@ import {
   StyledNavigationItem,
 } from "baseui/header-navigation";
 import { StyledLink } from "baseui/link";
+import { withStyle } from "baseui";
 
 export default () => {
   return (
-    <HeaderNavigation>
+    <HeaderNavigation $align={ALIGN.bottom}>
       <StyledNavigationList $align={ALIGN.left}>
         <StyledNavigationItem>
           Sang Le Tech - @2021 All Rights Reserved
